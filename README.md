@@ -80,9 +80,3 @@ python manage.py migrate_schemas --shared
 python manage.py makemigrations
 python manage.py migrate
 ```
-## Generar SECRET KEY
-```bash
-python manage.py shell
-from django.core.management.utils import get_random_secret_key
-print(get_random_secret_key())
-```
