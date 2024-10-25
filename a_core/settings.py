@@ -205,8 +205,8 @@ AWS_LOCATION = 'media'
 STORAGES = {
     'default': {
         # 'BACKEND': 'django_tenants.files.storage.TenantFileSystemStorage',
-        # 'BACKEND': 'a_home.storage.CustomSchemaStorage',
-        'BACKEND': 'storages.backends.s3.S3Storage',
+        'BACKEND': 'a_home.storage.CustomSchemaStorage',
+        # 'BACKEND': 'storages.backends.s3.S3Storage',
     },
     'staticfiles': {
         'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage',
