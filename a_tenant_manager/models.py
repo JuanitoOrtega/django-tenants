@@ -7,6 +7,9 @@ class Tenant(TenantMixin):
     paid_until = models.DateField(verbose_name='Pagado hasta')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Creado el')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Actualizado el')
+    # Auto create schema
+    auto_create_schema = True
+    auto_drop_schema = True
     
     class Meta:
         verbose_name = 'Cliente'
