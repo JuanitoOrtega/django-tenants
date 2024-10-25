@@ -17,7 +17,6 @@ env = Env()
 env.read_env()
 
 ENVIRONMENT = env('ENVIRONMENT', default='development')
-ENVIRONMENT = "production"
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,13 +34,11 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'uplace.vip']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'uplace.vip', '.uplace.vip']
 
-CSRF_TRUSTED_ORIGINS = [ 'https://uplace.vip' ]
-
+CSRF_TRUSTED_ORIGINS = ['https://uplace.vip', 'https://*.uplace.vip']
 
 # Application definition
-
 SHARED_APPS = [
     'django_tenants',
     'a_tenant_manager',
